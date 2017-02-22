@@ -1,0 +1,7 @@
+#ignore file or folder
+.idea
+target
+*.iml
+/.settings/
+/.classpath
+/.project
