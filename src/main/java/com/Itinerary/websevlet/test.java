@@ -1,4 +1,4 @@
-package websevlet;
+package com.itinerary.websevlet;
 
 /**
  * @author 肖强
