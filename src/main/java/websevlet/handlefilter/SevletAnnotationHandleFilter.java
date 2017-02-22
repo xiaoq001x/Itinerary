@@ -27,7 +27,7 @@ import me.gacl.util.ScanClassUtil;
  * @date: 2014-11-12 下午10:15:19
  *
  */
-public class AnnotationHandleFilter implements Filter {
+public class SevletAnnotationHandleFilter implements Filter {
 
     private ServletContext servletContext = null;
 
