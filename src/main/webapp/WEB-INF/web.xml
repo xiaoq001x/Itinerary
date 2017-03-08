@@ -7,23 +7,26 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
     <display-name>Archetype Created Web Application</display-name>
-
-    <filter>
-        <description>注解处理过滤器</description>
-        <filter-name>AnnotationHandleFilter</filter-name>
-        <filter-class>com.itinerary.websevlet.handlefilter.SevletAnnotationHandleFilter</filter-class>
+    <servlet>
+        <servlet-name>welcome</servlet-name>
+        <servlet-class>com.itinerary.servlet.testServlet</servlet-class>
         <init-param>
-            <description>配置要扫描包及其子包, 如果有多个包,以逗号分隔</description>
-            <param-name>basePackage</param-name>
-            <param-value>com.itinerary.servlet</param-value>
-            <!-- <param-value>me.gacl.web.controller</param-value> -->
+            <param-name>name</param-name>
+            <param-value>gacl</param-value>
         </init-param>
-    </filter>
-
-    <filter-mapping>
-        <filter-name>AnnotationHandleFilter</filter-name>
-        <!-- 拦截后缀是.do的请求 -->
-        <url-pattern>*.do</url-pattern>
-    </filter-mapping>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>123</param-value>
+        </init-param>
+        <init-param>
+            <param-name>charset</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>welcome</servlet-name>
+        <url-pattern>/en/welcome</url-pattern>
+        <url-pattern>/zh/welcome</url-pattern>
+    </servlet-mapping>
 
 </web-app>
